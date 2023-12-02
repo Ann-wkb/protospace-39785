@@ -1,0 +1,9 @@
+<div class="prototypes">
+  <%= link_to prototype_path(prototype) do %>
+    <%= image_tag prototype.image.variant(resize: '300x300'), class: 'prototype-image' if prototype.image.attached? %>
+  <% end %>
+  <h2><%= link_to prototype.title, root_path %></h2>
+  <p><%= prototype.catch_copy %></p>
+  <p class="text-right">投稿者: <%= prototype.user.name %></p>
+  <%= link_to "by #{prototype.user.name}", user_path(prototype.user), class: :card__user %>
+</div>
