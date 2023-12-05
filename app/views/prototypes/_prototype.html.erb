@@ -4,6 +4,5 @@
   <% end %>
   <h2><%= link_to prototype.title, prototype_path(prototype), class: :card__title%></h2>
   <p><%= prototype.catch_copy %></p>
-  <p class="text-right">投稿者: <%= prototype.user.name %></p>
   <%= link_to "by #{prototype.user.name}", user_path(prototype.user), class: :card__user %>
 </div>
